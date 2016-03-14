@@ -1,72 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>CV en ligne</title>
+
     <link rel="stylesheet" href="styles.css">
+    <link  href = "css / bootstrap.min.css"  rel = "stylesheet" >
+
 </head>
 <body class="layout">
-<h1 class="title">Andrieux Elodie</h1>
-<h2>Etudiante en DUT informatique</h2>
+<div class="row">
+    <div class="col-md-1">
+        <img src="stormtroopocat.png" style="width:100px;height:100px;">
+    </div>
+    <div class="col-md-11">
+        <h1 class="title">Andrieux Elodie</h1>
+        <h2>Etudiante en DUT informatique</h2>
+    </div>
+</div>
 
-<img src="stormtroopocat.png" style="width:100px;height:100px;">
 
-<h3>Formation</h3>
-<p>
+
+<h3 style="text-decoration:underline;">Formation</h3>
     <ul>
         <li>2015 - C2I obtenu à 65% - IUT de Calais</li>
         <li>2014-2015 - 1ère année du DUT informatique validée - IUT de Calais</li>
         <li>2013-2014 - Baccalauréat Scientifique Mention AB - Lycée Sophie Bertelot</li>
     </ul>
-</p>
 
-<h3>Compétences</h3>
-<p>
+
+<h3 style="text-decoration:underline;">Compétences</h3>
+<div class="row">
     <ul>
-        <li><h4>Langues : </h4>
-            <ul>
-                <li>Anglais</li>
-                <li>Espagnol</li>
-            </ul>
-        </li>
-        <li><h4>Informatique : </h4>
-            <ul>
-                <li>Base de données : Maîtrise du langage SQL/PSQL, du SGBD PGSQL et l'outil d'administration graphique PGAdmin</li>
-                <li>Réseaux : Maîtrise du logiciel Cisco Packet Tacer d'adressage IP</li>
-                <li>Développement WEB : Création d'un site sur les nouvelles technologies en trinôme, maîtrise du logiciel notepad++ et du langage HTML, CSS, JavaScript</li>
-            </ul>
-        </li>
-        <li><h4>Langages informatique : </h4>
-            <ul>
-                <li>C sur Code::Blocks</li>
-                <li>JAVA sur Emacs ou Gedit</li>
-                <li>HTML, CSS, JavaScript sur notepad++ et SublimeText</li>
-                <li>SQL</li>
-            </ul>
-        </li>
+        <div class="col-md-4">
+            <li><h4>Langages informatique : </h4>
+                <ul>
+                    <li>C sur Code::Blocks</li>
+                    <li>JAVA sur Emacs ou Gedit</li>
+                    <li>HTML, CSS, JavaScript sur notepad++ et SublimeText</li>
+                    <li>SQL</li>
+                </ul>
+            </li>
+        </div>
+        <div class="col-md-4">
+            <li><h4>Informatique : </h4>
+                <ul>
+                    <li>Base de données : Maîtrise du langage SQL/PSQL, du SGBD PGSQL et l'outil d'administration graphique PGAdmin</li>
+                    <li>Réseaux : Maîtrise du logiciel Cisco Packet Tacer d'adressage IP</li>
+                    <li>Développement WEB : Création d'un site sur les nouvelles technologies en trinôme, maîtrise du logiciel notepad++ et du langage HTML, CSS, JavaScript</li>
+                </ul>
+            </li>
+        </div>
+        <div class="col-md-4">
+            <li><h4>Langues : </h4>
+                <ul>
+                    <li>Anglais</li>
+                    <li>Espagnol</li>
+                </ul>
+            </li>
+        </div>
     </ul>
-</p>
+ </div>
 
-<h3>Centre d'intérêts</h3>
-<p>
-<ul>
-    <li><h4>Sport : </h4>
-        <ul>
-            <li>Judo</li>
-            <li>Piscine</li>
-        </ul>
-    </li>
-    <li><h4>Autres : </h4>
-        <ul>
-            <li>Dessin</li>
-            <li>Peinture</li>
-            <li>Jeux-vidéos</li>
-        </ul>
-    </li>
+<h3 style="text-decoration:underline;">Centre d'intérêts</h3>
+<Div>
+    <ul  class = "nav nav-tabs"  role= "tablist" >
+        <li  role= "presentation"  class= "active" ><a  href= "#home"  aria-controls= "home"  role= "tab"  data-toggle= "tab" > Sport </a></li>
+        <li  role= "presentation" ><a  href= "#profile"  aria-controls= "profile"  role= "tab"  data-toggle= "tab" > Autres </a></li>
+    </ul>
 
-</ul>
-</p>
+    <div  class = "tab-content" >
+        <div  role = "tabpanel"  class = "tab-volet fondu active"  id = "home" >
+            <ul>
+                <li>Judo</li>
+                <li>Piscine</li>
+            </ul>
+        </div>
+        <div  role = "tabpanel"  class = " tab-volet fade "  id = " profil " >
+            <ul>
+                <li>Dessin</li>
+                <li>Peinture</li>
+                <li>Jeux-vidéos</li>
+        </div>
+    </div>
+
+</Div>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"type="text/javascript"></script>
 
 </body>
 </html>
