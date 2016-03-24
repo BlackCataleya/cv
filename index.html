@@ -8,90 +8,195 @@
 
     <title>CV en ligne</title>
 
-    <link rel="stylesheet" href="styles.css">
-    <link  href = "css / bootstrap.min.css"  rel = "stylesheet" >
+    <link  href = "css/bootstrap.min.css" rel = "stylesheet">
+    <link  href = "style.css" rel = "stylesheet">
 
 </head>
+
+
 <body class="layout">
+
+
+
 <div class="row">
     <div class="col-md-1">
         <img src="stormtroopocat.png" style="width:100px;height:100px;">
     </div>
-    <div class="col-md-11">
+    <div class="col-md-4">
         <h1 class="title">Andrieux Elodie</h1>
         <h2>Etudiante en DUT informatique</h2>
+    </div>
+    <div class="col-md-1">
+        <button id="mecontacter" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Me contacter
+        </button>
     </div>
 </div>
 
 
 
-<h3 style="text-decoration:underline;">Formation</h3>
-    <ul>
-        <li>2015 - C2I obtenu à 65% - IUT de Calais</li>
-        <li>2014-2015 - 1ère année du DUT informatique validée - IUT de Calais</li>
-        <li>2013-2014 - Baccalauréat Scientifique Mention AB - Lycée Sophie Bertelot</li>
-    </ul>
 
 
-<h3 style="text-decoration:underline;">Compétences</h3>
-<div class="row">
-    <ul>
-        <div class="col-md-4">
-            <li><h4>Langages informatique : </h4>
-                <ul>
-                    <li>C sur Code::Blocks</li>
-                    <li>JAVA sur Emacs ou Gedit</li>
-                    <li>HTML, CSS, JavaScript sur notepad++ et SublimeText</li>
-                    <li>SQL</li>
-                </ul>
-            </li>
-        </div>
-        <div class="col-md-4">
-            <li><h4>Informatique : </h4>
-                <ul>
-                    <li>Base de données : Maîtrise du langage SQL/PSQL, du SGBD PGSQL et l'outil d'administration graphique PGAdmin</li>
-                    <li>Réseaux : Maîtrise du logiciel Cisco Packet Tacer d'adressage IP</li>
-                    <li>Développement WEB : Création d'un site sur les nouvelles technologies en trinôme, maîtrise du logiciel notepad++ et du langage HTML, CSS, JavaScript</li>
-                </ul>
-            </li>
-        </div>
-        <div class="col-md-4">
-            <li><h4>Langues : </h4>
-                <ul>
-                    <li>Anglais</li>
-                    <li>Espagnol</li>
-                </ul>
-            </li>
-        </div>
-    </ul>
- </div>
+<form id="form" class="form-horizontal" action="#" method="post">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Contact</h4>
+                </div>
+                <div class="modal-body">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Pseudo</label>
+                            <div class="col-sm-10">
+                                <input name="Pseudo : " type="text" class="form-control" id="inputPseudo3" placeholder="Pseudo">
+                            </div>
+                        </div>
 
-<h3 style="text-decoration:underline;">Centre d'intérêts</h3>
-<Div>
-    <ul  class = "nav nav-tabs"  role= "tablist" >
-        <li  role= "presentation"  class= "active" ><a  href= "#home"  aria-controls= "home"  role= "tab"  data-toggle= "tab" > Sport </a></li>
-        <li  role= "presentation" ><a  href= "#profile"  aria-controls= "profile"  role= "tab"  data-toggle= "tab" > Autres </a></li>
-    </ul>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input name="Email : " type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
 
-    <div  class = "tab-content" >
-        <div  role = "tabpanel"  class = "tab-volet fondu active"  id = "home" >
-            <ul>
-                <li>Judo</li>
-                <li>Piscine</li>
-            </ul>
-        </div>
-        <div  role = "tabpanel"  class = " tab-volet fade "  id = " profil " >
-            <ul>
-                <li>Dessin</li>
-                <li>Peinture</li>
-                <li>Jeux-vidéos</li>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Message</label>
+                            <div class="col-sm-10">
+                                <textarea id="inputMessage3" name="Message : " type="text" class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                </div>
+                <p id="res"></p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button id="envoyer" type="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+
+            </div>
         </div>
     </div>
+</form>
 
-</Div>
 
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"type="text/javascript"></script>
+
+
+
+
+
+
+<div class="container">
+    <div class="row"
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Formation
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <ul>
+                            <li>2015 - C2I obtenu à 65% - IUT de Calais</li>
+                            <li>2014-2015 - 1ère année du DUT informatique validée - IUT de Calais</li>
+                            <li>2013-2014 - Baccalauréat Scientifique Mention AB - Lycée Sophie Bertelot</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Compétences
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <div class="row">
+                            <ul>
+                                <div class="col-md-4">
+                                    <li><h4>Langages informatique : </h4>
+                                        <ul>
+                                            <li>C sur Code::Blocks</li>
+                                            <li>JAVA sur Emacs ou Gedit</li>
+                                            <li>HTML, CSS, JavaScript sur notepad++ et SublimeText</li>
+                                            <li>SQL</li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-md-4">
+                                    <li><h4>Informatique : </h4>
+                                        <ul>
+                                            <li>Base de données : Maîtrise du langage SQL/PSQL, du SGBD PGSQL et l'outil d'administration graphique PGAdmin</li>
+                                            <li>Réseaux : Maîtrise du logiciel Cisco Packet Tacer d'adressage IP</li>
+                                            <li>Développement WEB : Création d'un site sur les nouvelles technologies en trinôme, maîtrise du logiciel notepad++ et du langage HTML, CSS, JavaScript</li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="col-md-4">
+                                    <li><h4>Langues : </h4>
+                                        <ul>
+                                            <li>Anglais</li>
+                                            <li>Espagnol</li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Centres d'intérêts
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Sport</a></li>
+                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Loisirs</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                    <ul>
+                                        <li><p>Judo</p></li>
+                                        <li><p>Natation</p></li>
+                                    </ul>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="profile">
+                                    <ul>
+                                        <li><p>Dessin</p></li>
+                                        <li><p>Peinture</p></li>
+                                        <li><p>Jeux-Vidéos</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>
 
 </body>
 </html>
